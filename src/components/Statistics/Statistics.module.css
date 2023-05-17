@@ -1,0 +1,42 @@
+.statistics {
+  width: 400px;
+  margin: 40px auto;
+  overflow: hidden;
+  text-align: center;
+
+  color: #111111;
+  background-color: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 10px 11px 19px 5px rgba(64, 42, 64, 0.28);
+}
+
+.title {
+  padding: 12px;
+  color: #202024;
+
+  text-transform: uppercase;
+}
+
+.stat__list {
+  display: flex;
+
+  list-style: none;
+
+  color: aliceblue;
+}
+
+.item {
+  width: calc(100% / 5);
+  padding: 12px 0;
+  background-color: #eac645;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.percentage {
+  display: block;
+}
