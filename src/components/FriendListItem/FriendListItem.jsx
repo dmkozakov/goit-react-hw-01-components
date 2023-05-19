@@ -1,12 +1,18 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import {
+  ListItem,
+  Status,
+  Avatar,
+  UserName,
+} from 'components/FriendListItem/FriendListItem.styled';
 
 export function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <li className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt={`${name} avatar`} width="48" />
-      <p className="name">{name}</p>
-    </li>
+    <ListItem>
+      <Status isOnline={isOnline}>{isOnline}</Status>
+      <Avatar src={avatar} alt={`${name} avatar`} width="48" />
+      <UserName>{name}</UserName>
+    </ListItem>
   );
 }
 
