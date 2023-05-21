@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { TransactionItem } from 'components/TransactionItem/TransactionItem';
 import { Table, TableHead } from './TransactionHistory.styled';
+import { type } from '@testing-library/user-event/dist/type';
 
 export function TransactionHistory({ items }) {
   return (
@@ -28,5 +29,12 @@ export function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
