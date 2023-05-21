@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { TransactionItem } from 'components/TransactionItem/TransactionItem';
 import { Table, TableHead } from './TransactionHistory.styled';
-import { type } from '@testing-library/user-event/dist/type';
 
 export function TransactionHistory({ items }) {
   return (
